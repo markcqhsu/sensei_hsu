@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>徐合謙老師｜八字命理・五行開運 V1.0.2</title>
+  <title>徐合謙老師｜八字命理・五行開運 V1.0.3</title>
   <style>
     /* ── Reset & Base ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -78,6 +78,10 @@
       border: 1px solid var(--gold);
       color: var(--gold); font-size: 1rem; letter-spacing: .3em;
       padding: .35rem 1.2rem; margin-bottom: 1.8rem;
+    }
+    .tag-br::before { content: '・'; }
+    @media (max-width: 700px) {
+      .tag-br::before { content: ''; display: block; }
     }
     .hero-name {
       font-size: clamp(3rem, 8vw, 5.5rem);
@@ -210,6 +214,48 @@
       transform: scale(1.06); filter: sepia(0%) brightness(1);
     }
 
+    /* ── Products ── */
+    #products { background: var(--section-bg); }
+    .section-subtitle {
+      font-size: 1.1rem; color: #a89d84; letter-spacing: .08em;
+      margin-bottom: 2.5rem; line-height: 1.8;
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+    }
+    .product-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: border-color .3s, transform .3s;
+    }
+    .product-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-4px);
+    }
+    .product-card img {
+      width: 100%; aspect-ratio: 3/4;
+      object-fit: cover;
+      filter: brightness(0.92);
+      transition: filter .4s, transform .4s;
+      display: block;
+    }
+    .product-card:hover img {
+      filter: brightness(1);
+      transform: scale(1.04);
+    }
+    .product-name {
+      padding: .7rem 1rem;
+      font-size: 1rem; color: var(--gold-light);
+      letter-spacing: .12em; text-align: center;
+    }
+    @media (max-width: 700px) {
+      .products-grid { grid-template-columns: repeat(2, 1fr); gap: .8rem; }
+      .product-name { font-size: .9rem; padding: .5rem .6rem; }
+    }
+
     /* ── Contact ── */
     #contact { background: var(--section-bg); }
     .contact-box {
@@ -249,11 +295,11 @@
 
   <!-- NAV -->
   <nav>
-    <a class="nav-brand" href="#">徐合謙<span class="nav-version">V1.0.2</span></a>
+    <a class="nav-brand" href="#">徐合謙<span class="nav-version">V1.0.3</span></a>
     <ul class="nav-links">
       <li><a href="#about">關於</a></li>
       <li><a href="#expertise">專長</a></li>
-      <li><a href="#background">簡歷</a></li>
+      <li><a href="#products">開運飾品</a></li>
       <li><a href="#gallery">講座</a></li>
       <li><a href="#contact">聯絡</a></li>
     </ul>
@@ -264,7 +310,7 @@
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <div class="hero-tag">八字命理・五行開運・陽宅布局</div>
+      <div class="hero-tag">八字命理・五行開運<span class="tag-br"></span>陽宅布局・占卦</div>
       <h1 class="hero-name">徐<span>合</span>謙</h1>
       <p class="hero-title">命理諮商顧問・八字教學講師</p>
       <div class="hero-divider"></div>
@@ -410,6 +456,54 @@
           <div class="tl-dot"></div>
           <div class="tl-title">現任：言真命理諮商顧問</div>
           <div class="tl-sub">持續提供個人命盤解析、開運諮商與課程教學</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products">
+    <div class="section-inner">
+      <div class="section-label">Lucky Charms</div>
+      <h2 class="section-title">開運飾品</h2>
+      <div class="section-rule"></div>
+      <p class="section-subtitle">透過分析 找到自己避凶旺運的飾品</p>
+      <div class="products-grid">
+        <div class="product-card">
+          <img src="images/products/taishan-jade-seal.jpg" alt="泰山玉印" />
+          <div class="product-name">泰山玉印</div>
+        </div>
+        <div class="product-card">
+          <img src="images/products/herbal-pouch.jpg" alt="開運中藥包" />
+          <div class="product-name">開運中藥包</div>
+        </div>
+        <div class="product-card">
+          <img src="images/products/lucky-bracelet.jpg" alt="招財手串" />
+          <div class="product-name">招財手串</div>
+        </div>
+        <div class="product-card">
+          <img src="images/products/guardian-pendant.jpg" alt="本命佛項鍊" />
+          <div class="product-name">本命佛項鍊</div>
+        </div>
+        <div class="product-card">
+          <img src="images/products/dizang-box.jpg" alt="地藏菩薩木盒" />
+          <div class="product-name">地藏菩薩木盒</div>
+        </div>
+        <div class="product-card">
+          <img src="images/products/treasure-bowl.jpg" alt="銅製聚寶盆" />
+          <div class="product-name">銅製聚寶盆</div>
+        </div>
+        <div class="product-card">
+          <img src="images/products/five-emperor-coins.jpg" alt="五帝錢" />
+          <div class="product-name">五帝錢</div>
+        </div>
+        <div class="product-card">
+          <img src="images/products/brass-gourd.jpg" alt="黃銅葫蘆" />
+          <div class="product-name">黃銅葫蘆</div>
+        </div>
+        <div class="product-card">
+          <img src="images/products/fortune-scroll.jpg" alt="開運掛軸" />
+          <div class="product-name">開運掛軸</div>
         </div>
       </div>
     </div>
