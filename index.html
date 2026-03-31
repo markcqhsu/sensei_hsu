@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>徐合謙老師｜八字命理・五行開運</title>
+  <title>徐合謙老師｜八字命理・五行開運 V1.0.1</title>
   <style>
     /* ── Reset & Base ── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; font-size: 112%; }
     body {
       font-family: "Noto Serif TC", "Georgia", serif;
       background: #0f0e0b;
@@ -40,12 +40,16 @@
       height: 60px;
     }
     .nav-brand {
-      font-size: 1.1rem; font-weight: 700; color: var(--gold);
+      font-size: 1.2rem; font-weight: 700; color: var(--gold);
       letter-spacing: .15em; text-decoration: none;
+    }
+    .nav-version {
+      font-size: .65rem; color: #5a5445; letter-spacing: .05em;
+      font-weight: 400; vertical-align: middle; margin-left: .5rem;
     }
     .nav-links { display: flex; gap: 2rem; list-style: none; }
     .nav-links a {
-      color: #c8bfa8; font-size: .88rem; text-decoration: none;
+      color: #c8bfa8; font-size: 1rem; text-decoration: none;
       letter-spacing: .08em; transition: color .2s;
     }
     .nav-links a:hover { color: var(--gold-light); }
@@ -72,7 +76,7 @@
     .hero-tag {
       display: inline-block;
       border: 1px solid var(--gold);
-      color: var(--gold); font-size: .8rem; letter-spacing: .3em;
+      color: var(--gold); font-size: 1rem; letter-spacing: .3em;
       padding: .35rem 1.2rem; margin-bottom: 1.8rem;
     }
     .hero-name {
@@ -83,7 +87,7 @@
     }
     .hero-name span { color: var(--gold); }
     .hero-title {
-      margin-top: 1rem; font-size: clamp(1rem, 2.5vw, 1.35rem);
+      margin-top: 1rem; font-size: clamp(1.2rem, 2.5vw, 1.55rem);
       color: #c8bfa8; letter-spacing: .2em;
     }
     .hero-divider {
@@ -91,14 +95,14 @@
       background: var(--gold); margin: 1.8rem auto;
     }
     .hero-tagline {
-      font-size: clamp(.95rem, 2vw, 1.15rem);
+      font-size: clamp(1.1rem, 2vw, 1.3rem);
       color: #b5a98a; max-width: 560px; margin: 0 auto;
       letter-spacing: .06em;
     }
     .hero-cta {
       display: inline-block; margin-top: 2.5rem;
       padding: .9rem 2.8rem; border: 1.5px solid var(--gold);
-      color: var(--gold); font-size: .9rem; letter-spacing: .2em;
+      color: var(--gold); font-size: 1.05rem; letter-spacing: .2em;
       text-decoration: none; transition: all .3s;
     }
     .hero-cta:hover {
@@ -109,11 +113,11 @@
     section { padding: 6rem 2rem; }
     .section-inner { max-width: 1000px; margin: 0 auto; }
     .section-label {
-      font-size: .75rem; letter-spacing: .4em; color: var(--gold);
+      font-size: .9rem; letter-spacing: .4em; color: var(--gold);
       text-transform: uppercase; margin-bottom: .6rem;
     }
     .section-title {
-      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      font-size: clamp(1.9rem, 3.5vw, 2.6rem);
       font-weight: 700; color: var(--cream); letter-spacing: .1em;
       margin-bottom: .6rem;
     }
@@ -136,13 +140,13 @@
     }
     .about-text p {
       color: #c8bfa8; margin-bottom: 1.2rem;
-      font-size: 1.05rem; line-height: 2;
+      font-size: 1.15rem; line-height: 2;
     }
     .badge-row { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.8rem; }
     .badge {
       padding: .4rem 1rem;
       border: 1px solid var(--border); color: var(--gold-light);
-      font-size: .82rem; letter-spacing: .1em;
+      font-size: .95rem; letter-spacing: .1em;
       background: rgba(201,168,76,0.06);
     }
 
@@ -165,10 +169,10 @@
     }
     .card-icon { font-size: 2rem; margin-bottom: 1rem; }
     .card-title {
-      font-size: 1.05rem; color: var(--gold-light);
+      font-size: 1.2rem; color: var(--gold-light);
       letter-spacing: .1em; margin-bottom: .8rem; font-weight: 600;
     }
-    .card-desc { font-size: .92rem; color: #a89d84; line-height: 1.9; }
+    .card-desc { font-size: 1.05rem; color: #a89d84; line-height: 1.9; }
 
     /* ── Background (timeline) ── */
     #background { background: var(--section-bg); }
@@ -184,10 +188,10 @@
       border-radius: 50%; transform: translateX(-4px);
     }
     .tl-title {
-      font-size: 1rem; color: var(--cream);
+      font-size: 1.15rem; color: var(--cream);
       font-weight: 600; letter-spacing: .06em;
     }
-    .tl-sub { font-size: .88rem; color: #8a7f68; margin-top: .2rem; }
+    .tl-sub { font-size: 1rem; color: #8a7f68; margin-top: .2rem; }
 
     /* ── Gallery ── */
     #gallery { background: #0f0e0b; }
@@ -214,19 +218,19 @@
       padding: 3rem 2.5rem; text-align: center;
       max-width: 560px; margin: 0 auto;
     }
-    .contact-box p { color: #a89d84; margin-bottom: 1.8rem; font-size: 1rem; line-height: 1.9; }
+    .contact-box p { color: #a89d84; margin-bottom: 1.8rem; font-size: 1.15rem; line-height: 1.9; }
     .contact-item {
       display: flex; align-items: center; justify-content: center;
       gap: .8rem; margin-bottom: 1.1rem;
-      color: var(--gold-light); font-size: 1rem; letter-spacing: .1em;
+      color: var(--gold-light); font-size: 1.15rem; letter-spacing: .1em;
     }
-    .contact-item .icon { font-size: 1.2rem; }
+    .contact-item .icon { font-size: 1.4rem; }
 
     /* ── Footer ── */
     footer {
       text-align: center; padding: 2rem;
       border-top: 1px solid var(--border);
-      font-size: .8rem; color: #5a5445; letter-spacing: .1em;
+      font-size: .95rem; color: #5a5445; letter-spacing: .1em;
     }
 
     /* ── Responsive ── */
@@ -243,7 +247,7 @@
 
   <!-- NAV -->
   <nav>
-    <a class="nav-brand" href="#">徐合謙</a>
+    <a class="nav-brand" href="#">徐合謙<span class="nav-version">V1.0.1</span></a>
     <ul class="nav-links">
       <li><a href="#about">關於</a></li>
       <li><a href="#expertise">專長</a></li>
